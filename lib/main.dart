@@ -25,7 +25,7 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      //options: DefaultFirebaseOptions.currentPlatform,
+      //options: DefaultFirebaseOptions.currentPlatform,,
       );
   // bool result = await AuthService.isLoggedIn();
   // if (result) {
