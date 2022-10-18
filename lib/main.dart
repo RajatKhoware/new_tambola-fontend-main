@@ -1,19 +1,23 @@
-import 'package:tambola_frontend/screens/CustomerSupport/customer_support.dart';
-import 'package:tambola_frontend/screens/CustomerSupport/t_and_c.dart';
-import 'package:tambola_frontend/screens/SignUp_Screens/sign_up_screen_1.dart';
-import 'package:tambola_frontend/screens/SignUp_Screens/sign_up_screen_2.dart';
-import 'package:tambola_frontend/screens/SignUp_Screens/sign_up_screen_3.dart';
-import 'package:tambola_frontend/screens/SignUp_Screens/sign_up_screen_4.dart';
-import 'package:tambola_frontend/screens/SignUp_Screens/sign_up_start.dart';
-import 'package:tambola_frontend/widgets/navbar/new_nav_bar.dart';
-import 'models/user.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:tambola_frontend/providers/game_provider.dart';
-import 'package:tambola_frontend/providers/user_provider.dart';
-import 'package:tambola_frontend/screens/Login/login_screen.dart';
-import 'package:tambola_frontend/screens/PlayRoom/select_room_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:provider/provider.dart';
+import 'Features/play_room/presentation/screens/select_room_screen.dart';
+import 'Features/sign_up-&-login/presentation/screens/login_screen.dart';
+import 'Features/sign_up-&-login/presentation/screens/sign_up_screen_1.dart';
+import 'Features/sign_up-&-login/presentation/screens/sign_up_screen_2.dart';
+import 'Features/sign_up-&-login/presentation/screens/sign_up_screen_3.dart';
+import 'Features/sign_up-&-login/presentation/screens/sign_up_screen_4.dart';
+import 'Features/sign_up-&-login/presentation/screens/sign_up_start.dart';
+import 'Features/support/presentation/screens/customer_support.dart';
+import 'Features/support/presentation/screens/customer_support_3.dart';
+import 'Features/support/presentation/screens/t_and_c.dart';
+import 'core/models/user.dart';
+import 'core/providers/game_provider.dart';
+import 'core/providers/user_provider.dart';
+import 'core/widgets/navbar/new_nav_bar.dart';
+import 'lang/localization_service.dart';
 
 Widget _initialHomeRoute = SignUpStart();
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -27,6 +31,7 @@ void main() async {
   // if (result) {
   //   _initialHomeRoute = SplashScreen();
   // }
+  await GetStorage.init();
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => UserProvider()),
@@ -43,8 +48,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      translations: LocalizationService(),
+      locale: LocalizationService().getCurrentLocale(),
+      fallbackLocale: Locale('en', 'US'),
       title: 'Tambola',
       initialRoute: '/',
       routes: {
