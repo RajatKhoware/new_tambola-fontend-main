@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:get/get.dart';
 
 class NewCoustomText extends StatelessWidget {
   final String text;
@@ -29,7 +30,7 @@ class NewCoustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         builder: (context, child) => GradientText(
-              text,
+              text.tr,
               style: TextStyle(
                 fontSize: fontsize.sp,
                 fontWeight: fontWeight,
@@ -78,7 +79,7 @@ class NewCoustomText2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         builder: (context, child) => GradientText(
-              text,
+              text.tr,
               style: TextStyle(
                 overflow: overflow,
                 fontSize: fontsize.sp,

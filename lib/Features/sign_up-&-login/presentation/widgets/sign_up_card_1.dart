@@ -39,14 +39,14 @@ class _SignUpCard1State extends State<SignUpCard1> {
               child: Column(
                 children: [
                   NewCoustomText2(
-                    text: "Bonzo".tr,
+                    text: "Bonzo",
                     fontsize: 50.sp,
                     fontFamily: 'IrishGrover',
                     fontWeight: FontWeight.w500,
                     color: newblue2liner.colors,
                   ),
                   NewCoustomText2(
-                    text: "Welcome".tr,
+                    text: "Welcome",
                     fontsize: 28.sp,
                     fontFamily: "Inter",
                     fontWeight: FontWeight.w700,
