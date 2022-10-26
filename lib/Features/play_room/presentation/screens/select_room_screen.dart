@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tambola_frontend/Features/play_room/presentation/screens/royal_tambola_card.dart';
-import 'package:tambola_frontend/Features/play_room/presentation/screens/select_room_practise_card.dart';
+import 'package:tambola_frontend/Features/play_room/presentation/widgets/invite_card.dart';
+import 'package:tambola_frontend/Features/play_room/presentation/widgets/royal_tambola_card.dart';
+import 'package:tambola_frontend/Features/play_room/presentation/widgets/select_room_practise_card.dart';
 import 'package:get/get.dart';
 import '../../../../core/constants/gradients.dart';
 import '../../../../core/constants/new_gradints.dart';
@@ -74,6 +75,8 @@ class _SelectRoomScreenState extends State<SelectRoomScreen> {
                 children: [
                   SizedBox(height: 10.h),
                   PractiseRoomCard(),
+                  SizedBox(height: 20.h),
+                  InviteRoomCard(),
                   SizedBox(height: 20.h),
                   RoyalTambolaCard(),
                   SizedBox(height: 40.h),

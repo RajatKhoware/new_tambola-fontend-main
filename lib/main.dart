@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
+import 'package:tambola_frontend/Features/invite_room/presentation/screens/invite_room_screen.dart';
+import 'package:tambola_frontend/Features/waiting_room/waiting_room/presentation/screens/waiting_room_screen.dart';
 import 'Features/play_room/presentation/screens/select_room_screen.dart';
 import 'Features/sign_up-&-login/presentation/screens/login_screen.dart';
 import 'Features/sign_up-&-login/presentation/screens/sign_up_screen_1.dart';
@@ -11,7 +13,6 @@ import 'Features/sign_up-&-login/presentation/screens/sign_up_screen_3.dart';
 import 'Features/sign_up-&-login/presentation/screens/sign_up_screen_4.dart';
 import 'Features/sign_up-&-login/presentation/screens/sign_up_start.dart';
 import 'Features/support/presentation/screens/customer_support.dart';
-import 'Features/support/presentation/screens/customer_support_3.dart';
 import 'Features/support/presentation/screens/t_and_c.dart';
 import 'core/models/user.dart';
 import 'core/providers/game_provider.dart';
@@ -19,7 +20,7 @@ import 'core/providers/user_provider.dart';
 import 'core/widgets/navbar/new_nav_bar.dart';
 import 'lang/localization_service.dart';
 
-Widget _initialHomeRoute = SignUpStart();
+Widget _initialHomeRoute = InviteRoomScreen();
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
