@@ -79,6 +79,10 @@ class InviteRoomScreen extends StatelessWidget {
                                   gradient: newmetalliccard),
                               child: TextFormField(
                                 controller: _playersController,
+                                decoration: InputDecoration(
+                                    labelText: "2 to 100",
+                                    border: OutlineInputBorder()),
+                                    keyboardType: TextInputType.number,
                               ),
                             )),
                         Padding(
