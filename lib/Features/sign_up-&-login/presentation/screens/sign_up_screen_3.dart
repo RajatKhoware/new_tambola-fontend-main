@@ -38,9 +38,10 @@ class _NewSignUpScreen2State extends State<NewSignUpScreen3> {
               child: FittedBox(
                 fit: BoxFit.cover,
                 child: SizedBox(
-                  width: _controller.value.size.width,
-                  height: _controller.value.size.height,
-                  child: VideoPlayer(_controller),
+                  // width: _controller.value.size.width,
+                  // height: _controller.value.size.height,
+                  // child: VideoPlayer(_controller),
+                   child: Image.asset("assets/gifs/part_4.gif"),
                 ),
               ),
             ),

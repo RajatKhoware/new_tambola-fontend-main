@@ -15,14 +15,10 @@ class _SignUpStartState extends State<SignUpStart> {
   late VideoPlayerController _controller;
   final String uri =
       "https://www.googleapis.com/drive/v3/files/1EnZzEBoPH98BuZiV-_1uacBZy9Qcgt2c?alt=media&key=AIzaSyBESCVqgXk5Y4c9vexeamg8FAit3xSM3fY";
-     // https://firebasestorage.googleapis.com/v0/b/flutter-firebase-auth-8e6e9.appspot.com/o/1%20(2).mp4?alt=media&token=62ab01fa-8dd6-40a0-b37f-4281cea44bbd
-  //https://www.googleapis.com/drive/v3/files/1EnZzEBoPH98BuZiV-_1uacBZy9Qcgt2c?alt=media&key=AIzaSyBESCVqgXk5Y4c9vexeamg8FAit3xSM3fY
-  // http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4
-  //https://drive.google.com/file/d/1nULpd1_JU8mWp4lh9awDhtuSZFk6y46w/view?usp=sharing
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(uri)
+    _controller = VideoPlayerController.asset("assets/videos/mp4.mp4")
       ..initialize().then((_) {
         _controller.play();
         _controller.setLooping(false);
@@ -41,9 +37,10 @@ class _SignUpStartState extends State<SignUpStart> {
               child: FittedBox(
                 fit: BoxFit.cover,
                 child: SizedBox(
-                  width: _controller.value.size.width,
-                  height: _controller.value.size.height,
-                  child: VideoPlayer(_controller),
+                  // width: _controller.value.size.width,
+                  // height: _controller.value.size.height,
+                  // child: VideoPlayer(_controller),
+                  child: Image.asset("assets/gifs/part_1.gif"),
                 ),
               ),
             ),
@@ -59,6 +56,12 @@ class _SignUpStartState extends State<SignUpStart> {
     );
   }
 }
+
+
+  // https://firebasestorage.googleapis.com/v0/b/flutter-firebase-auth-8e6e9.appspot.com/o/1%20(2).mp4?alt=media&token=62ab01fa-8dd6-40a0-b37f-4281cea44bbd
+  //https://www.googleapis.com/drive/v3/files/1EnZzEBoPH98BuZiV-_1uacBZy9Qcgt2c?alt=media&key=AIzaSyBESCVqgXk5Y4c9vexeamg8FAit3xSM3fY
+  // http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4
+  //https://drive.google.com/file/d/1nULpd1_JU8mWp4lh9awDhtuSZFk6y46w/view?usp=sharing
 
 
 // class VideoPlayerWidget extends StatelessWidget {
