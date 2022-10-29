@@ -20,6 +20,7 @@ class SignUpCard1 extends StatefulWidget {
 
 class _SignUpCard1State extends State<SignUpCard1> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
